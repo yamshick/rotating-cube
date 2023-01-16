@@ -1,4 +1,6 @@
-class Point {
+import {W,H,MODEL_MIN_X,MODEL_MAX_X, MODEL_MIN_Y, MODEL_MAX_Y} from "./constants.js";
+
+export class Point {
 	print() {
 		console.log("Point: ", this.getX(), this.getY(), this.getZ());
 	}

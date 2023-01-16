@@ -1,7 +1,7 @@
 const path = require("path");
 
 module.exports = {
-    entry: "/src/render-cube.js",
+    entry: "/src/index.js",
     output: {
         path: path.resolve(__dirname, "dist"),
     },
@@ -9,6 +9,7 @@ module.exports = {
         port: 3000,
         static: path.join(__dirname, "src"),
     },
+    devtool: 'source-map',
     module: {
         rules: [
             {
@@ -16,9 +17,9 @@ module.exports = {
                 exclude: /node_modules/,
                 use: {
                     loader: "babel-loader",
-                    "options": {
-                        "presets": [ "@babel/preset-env", ]
-                    }
+                    // "options": {
+                    //     "presets": [ "@babel/preset-env", ]
+                    // }
                 },
             },
             // {

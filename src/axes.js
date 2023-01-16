@@ -1,4 +1,7 @@
-class Axes {
+
+import {W,H} from "./constants.js";
+import {Point} from "./point.js";
+export class Axes {
 	
 	constructor(scale = 2) {
 		

@@ -1,4 +1,5 @@
-class Polygon {
+import {Point} from "./point.js";
+export class Polygon {
 	print() {
 		console.log("Polygon");
 		this.vertices.forEach(point => {

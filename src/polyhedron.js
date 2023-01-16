@@ -1,4 +1,4 @@
-class Polyhedron {
+export class Polyhedron {
 	
 	constructor() {
 
