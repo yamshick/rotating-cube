@@ -5,7 +5,7 @@
 ////////////////////////////////////////////////////////////////////////////
 
 
-var COLORS = [
+const COLORS = [
 	"skyblue",
 	"pink",
 	"yellow",
@@ -39,7 +39,7 @@ var COLORS = [
  * 
  * */
  
-var cubeVertices = {
+const cubeVertices = {
 	//  		 [ x,  y,  z]
 	A:  new Point(-1, -1,  1),
 	B:  new Point( 1, -1,  1),
@@ -62,8 +62,8 @@ var cubeVertices = {
  * */
 
 // consider correct orientation
-var cubePolygons = (function(){
-	var v = cubeVertices;
+const cubePolygons = (function(){
+	const v = cubeVertices;
 	return [
 		// bottom
 		new Polygon(v.A, v.D, v.C, v.B),
@@ -97,18 +97,15 @@ var cubePolygons = (function(){
 
 
 function renderCubeAnimation(rotationXAngle, rotationYAngle, rotationZAngle) {
-	let startPhi = 0,
-		deltaPhi = rotationXAngle,
+	let deltaPhi = rotationXAngle,
 		curPhi = 0,
 		endPhi = 10 * Math.PI;
 
-	let startPsi = 0,
-		deltaPsi = rotationYAngle,
+	let deltaPsi = rotationYAngle,
 		curPsi = 0,
 		endPsi = 10 * Math.PI;
 
-	let startTheta = 0,
-		deltaTheta = rotationZAngle,
+	let deltaTheta = rotationZAngle,
 		curTheta = 0,
 		endTheta = 10 * Math.PI;
 	
@@ -146,7 +143,7 @@ function renderCubeAnimation(rotationXAngle, rotationYAngle, rotationZAngle) {
 
 
 // never put camera inside the cube 
-var CAMERA = new Point(3, 4, 3);
+let CAMERA = new Point(3, 4, 3);
 
 
 ////////////////////////////////////////////////////////////////////////////
